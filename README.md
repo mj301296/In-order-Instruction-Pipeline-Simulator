@@ -6,15 +6,12 @@ A template for 5 Stage APEX In-order Pipeline
  - This code is a simple implementation template of a working 5-Stage APEX In-order Pipeline
  - Implementation is in `C` language
  - Stages: Fetch -> Decode -> Execute -> Memory -> Writeback
- - You can read, modify and build upon given code-base to add other features as required in project description
- - You are also free to write your own implementation from scratch
- - All the stages have latency of one cycle
- - There is a single functional unit in Execute stage which perform all the arithmetic and logic operations
+ - The execute stage is divided into three parellel processing stages: Integer, Multiplier and Load-Store
+ - All the stages except Multiplier have latency of one cycle. Multiplier has a latency of 3 cycles
  - Logic to check data dependencies has not be included
- - Includes logic for `ADD`, `LOAD`, `BZ`, `BNZ`,  `MOVC` and `HALT` instructions
+ - Includes logic for `ADD`, `ADDL`, `SUB`, `SUBL`, `MUL`, `DIV`, `LOAD`, `STORE`, `LDR`,  `STR`, `CMP`, `NOP` and`HALT` instructions
  - On fetching `HALT` instruction, fetch stage stop fetching new instructions
  - When `HALT` instruction is in commit stage, simulation stops
- - You can modify the instruction semantics as per the project description
 
 ## Files:
 
@@ -35,6 +32,19 @@ A template for 5 Stage APEX In-order Pipeline
  Run as follows:
 ```
  ./apex_sim <input_file_name>
+ 
+  Simulator functions:
+```
+To display final register and data memory values
+ ./apex_sim <input_file.asm> simulate
+To display final register and data memory values along with each clock cycle information 
+ ./apex_sim <input_file.asm> display
+To display final register and data memory values upto particular cycle number
+ ./apex_sim <input_file.asm> simulate <no of cycles>
+To perform processing of one cycle as a single step  
+ ./apex_sim <input_file.asm> single_step
+To display data stored at a particular location
+ ./apex_sim <input_file.asm> show_mem <memory_position>
 ```
 
 ## Author
