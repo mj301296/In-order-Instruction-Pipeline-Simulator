@@ -46,13 +46,3 @@ To perform processing of one cycle as a single step
 To display data stored at a particular location
  ./apex_sim <input_file.asm> show_mem <memory_position>
 ```
-
-## Author
-
- - Copyright (C) Gaurav Kothari (gkothar1@binghamton.edu)
- - State University of New York, Binghamton
-
-## Bugs
-
- - Please contact your TAs for any assistance or query
- - Report bugs at: gkothar1@binghamton.edu
