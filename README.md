@@ -33,6 +33,7 @@ A template for 5 Stage APEX In-order Pipeline
 ```
  ./apex_sim <input_file_name>
  
+```
 ## Simulator functions:
 ```
 To display final register and data memory values
