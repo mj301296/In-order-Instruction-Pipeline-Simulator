@@ -36,9 +36,9 @@ A template for 5 Stage APEX In-order Pipeline
 ```
 ## Simulator functions:
 ```
-To display final register and data memory values
+`To display final register and data memory values`
  ./apex_sim <input_file.asm> simulate
-To display final register and data memory values along with each clock cycle information 
+`To display final register and data memory values along with each clock cycle information`
  ./apex_sim <input_file.asm> display
 To display final register and data memory values upto particular cycle number
  ./apex_sim <input_file.asm> simulate <no of cycles>
