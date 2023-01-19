@@ -38,12 +38,12 @@ A template for 5 Stage APEX In-order Pipeline
 
  - `MakefileTo display final register and data memory values`<br>
  ./apex_sim <input_file.asm> simulate
-`To display final register and data memory values along with each clock cycle information`
+ - `To display final register and data memory values along with each clock cycle information`<br>
  ./apex_sim <input_file.asm> display
-To display final register and data memory values upto particular cycle number
+ - 'To display final register and data memory values upto particular cycle number'<br>
  ./apex_sim <input_file.asm> simulate <no of cycles>
-To perform processing of one cycle as a single step  
+ - 'To perform processing of one cycle as a single step'<br>  
  ./apex_sim <input_file.asm> single_step
-To display data stored at a particular location
+ - 'To display data stored at a particular location'<br>
  ./apex_sim <input_file.asm> show_mem <memory_position>
 
